@@ -1,0 +1,32 @@
+.floating-icon {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px); /* Moves up */
+    }
+    100% {
+      transform: translateY(0); /* Returns to original position */
+    }
+  }
+
+  .arrow-animation {
+    animation: arrow-move 2s ease-in-out forwards;
+  }
+  
+  @keyframes arrow-move {
+    0% {
+      transform: translateX(0) translateY(0);
+    }
+    50% {
+      transform: translateX(-25px) translateY(50px);
+    }
+    100% {
+      transform: translateX(0) translateY(80px);
+    }
+  }
+  
