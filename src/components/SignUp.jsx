@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { createClient, SupabaseClient } from '@supabase/supabase-js'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import '../assets/styles/toast.css'
 
 
 const supabaseUrl = 'https://ofqdiiomchqesounleol.supabase.co'
@@ -30,53 +31,64 @@ export default function SignUp() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     setIsSubmitting(true)
-    
+  
     if (!email) {
       toast.error('Please enter an email address')
       setIsSubmitting(false)
       return
     }
-
+  
     if (!supabase) {
       toast.error('Unable to connect to the database. Please try again later.')
       setIsSubmitting(false)
       return
     }
-
+  
     try {
+      // Check if the email already exists
+      const { data: existingEmails, error: checkError } = await supabase
+        .from('emails')
+        .select('email')
+        .eq('email', email)
+  
+      if (checkError) {
+        console.error('Error checking existing email:', checkError)
+        toast.error('An error occurred. Please try again.')
+        setIsSubmitting(false)
+        return
+      }
+  
+      if (existingEmails && existingEmails.length > 0) {
+        toast.error('This email is already on the waitlist.')
+        setIsSubmitting(false)
+        return
+      }
+  
+
       const { data, error } = await supabase
         .from('emails')
         .insert([{ email: email }])
         .select()
-
+  
       if (error) {
         console.error('Supabase error:', error)
-        if (error.code === '42501') {
-          toast.error('Unable to submit. Please try again later or contact support.')
-        } else {
-          toast.error('An error occurred. Please try again.')
-        }
+        toast.error('An error occurred while submitting your email. Please try again.')
         throw error
       }
-
+  
       if (data) {
         console.log('Inserted data:', data)
-        if (isMounted) {
-          toast.success('Thank you for joining our waitlist!')
-          setEmail('')
-        }
+        toast.success('Thank you for joining our waitlist!')
+        setEmail('')
       }
     } catch (error) {
       console.error('Error inserting email:', error)
-      if (isMounted) {
-        toast.error('An error occurred while submitting your email. Please try again.')
-      }
+      toast.error('An error occurred while submitting your email. Please try again.')
     } finally {
-      if (isMounted) {
-        setIsSubmitting(false)
-      }
+      setIsSubmitting(false)
     }
   }
+  
 
   return (
     <div className="full-width-container px-4 py-12 mb-20">
@@ -107,7 +119,7 @@ export default function SignUp() {
         </form>
       </div>
     </div>
-    <ToastContainer position="top-center" />
+    <ToastContainer className="custom-toast-container" position="top-center" />
   </div>
   
 
