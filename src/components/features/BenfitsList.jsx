@@ -3,13 +3,13 @@ import React from "react";
 export default function BenfitsList() {
   return (
     <div className="flex justify-center w-full px-4 md:-ml-20">
-      <div className="grid grid-cols-1 gap-6 w-[360px] md:grid-cols-[1fr_404px_1fr] md:w-full md:mt-40">
+      <div className="grid grid-cols-1 gap-6 w-[360px] md:grid-cols-[1fr_404px_1fr] md:gap-y-2 md:w-full md:mt-40">
         {/* First Card (Perks) */}
         <div className="row-span-2 p-6 pt-12 bg-white h-[410px] rounded-[26px] w-full md:w-[330px] md:h-[510px] md:mb-10">
           <h2 className="font-bold font-custom mb-6 text-[31px] md:text-2xl ">
             What are the membership perks?
           </h2>
-          <div className="flex flex-col gap-5 space-y-3 font-custom2 font-normal h-[410px]  text-[15px] ">
+          <div className="flex flex-col gap-5 space-y-3 font-custom font-normal h-[410px]  text-[15px] ">
             {[
               "Perfectly timed to your routine",
               "Save more",
@@ -41,7 +41,7 @@ export default function BenfitsList() {
         </div>
 
         {/* Second Card (Quality) */}
-        <div className="p-6 pt-12 bg-white rounded-[26px] h-[217px] w-full md:w-[404px] md:h-[255px] flex md:block items-center justify-center text-center md:text-center">
+        <div className="p-6 pt-12 bg-white rounded-[26px] h-[217px] w-full md:w-[404px] md:h-[215px] flex md:block items-center justify-center text-center md:text-center">
           <div className="w-full flex flex-col items-center justify-center md:items-start md:text-center">
             <h2 className="text-[36px] font-custom w-1/2 leading-[40px]  md:w-full font-bold mb-4 md:text-3xl">
               100% Quality

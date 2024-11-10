@@ -5,7 +5,7 @@ export default function FeatureCards() {
   return (
     <div className="w-full flex items-center justify-center min-h-screen md:">
       <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 gap-8 px-4 w-full">
-        {/* First Card - Orange section at bottom */}
+        {/* First Card */}
         <div className="rounded-lg flex flex-col w-full">
           <div className="bg-white rounded-t-[22px] w-full px-6 py-8">
             <h1 className="text-5xl font-custom font-medium mb-2">Feel</h1>

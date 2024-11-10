@@ -5,8 +5,8 @@ import 'react-toastify/dist/ReactToastify.css'
 import '../assets/styles/toast.css'
 
 
-const supabaseUrl = 'https://ofqdiiomchqesounleol.supabase.co'
-const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9mcWRpaW9tY2hxZXNvdW5sZW9sIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzEwMDU1OTAsImV4cCI6MjA0NjU4MTU5MH0.oExzRDY4RMZe4aCXfiGzZy_jfoO5_oDE0YMeE_fXGjo'
+const supabaseUrl = process.env.REACT_APP_SUPABASE_URL;
+const supabaseKey = process.env.REACT_APP_SUPABASE_KEY;
 
 let supabase = null
 

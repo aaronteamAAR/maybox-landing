@@ -7,7 +7,7 @@ export default function HeroSection() {
       
       {/* Part 1 */}
       <div className="mt-16 text-center space-y-6 md:w-full md:space-y-8 md:text-left">
-        <h1 className="text-[35px] leading-[35.16px] md:text-4xl lg:text-6xl font-custom font-semibold text-gray-900">
+        <h1 className="text-[35px] tracking-tight leading-[35.16px] md:text-4xl lg:text-6xl font-custom font-semibold text-gray-900">
           Beauty, self care <br className="hidden md:block" />
           and wellness <br className="hidden md:block" />
           that <span className="text-[#FBA013]">delivers</span>
