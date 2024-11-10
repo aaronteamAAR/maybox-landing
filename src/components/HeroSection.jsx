@@ -49,13 +49,28 @@ export default function HeroSection() {
       </div>
 
       {/* Part 2 */}
-      <div className="flex justify-center mt-24 md:w-1/2 md:mt-12">
-        <img
-          src={Hero}
-          alt="hero image"
-          className="w-[323px] h-[409px] md:w-[340px] md:h-[449px]"
-        />
+      <div className="flex justify-center mt-24 md:w-1/2 md:mt-12 relative">
+      <img
+        src={Hero}
+        alt="hero image"
+        className="w-[323px] h-[409px] md:w-[340px] md:h-[449px] rounded-3xl"
+      />
+      
+      <div className="absolute top-3 left-4">
+        <div className="relative">
+    
+          <div className="absolute w-full h-full -right-4 -bottom-2" />
+          
+          {/* Text Content */}
+          <div className="relative font-custom p-4">
+            <h1 className="text-4xl  font-bold text-white leading-tight">
+              Maya<br />Daniels
+            </h1>
+            <p className="text-white text-lg mt-1">beauty vlogger</p>
+          </div>
+        </div>
       </div>
+    </div>
       
     </div>
   );
