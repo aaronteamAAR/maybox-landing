@@ -107,7 +107,7 @@ export default function SignUp() {
         </form>
       </div>
     </div>
-    <ToastContainer position="bottom-center" />
+    <ToastContainer position="top-center" />
   </div>
   
 
