@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -11,6 +11,12 @@ export default function HeroSection() {
       once: true,
     });
   }, []);
+  const scrollToInput = () => {
+    document.querySelector("#sign-up-input").scrollIntoView({
+      behavior: 'smooth',
+      block: 'center'
+    });
+  };
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -66,6 +72,7 @@ export default function HeroSection() {
 
         <div className="py-6 md:py-0" data-aos="fade-up" data-aos-delay="700">
           <button
+          onClick={scrollToInput}
             className="bg-[#FBA013] w-[214px] p-3 px-5 rounded-[14px] flex items-center justify-center gap-2 mx-auto md:w-[235.53px] md:mx-0 hover:bg-[#e89412] transition-colors"
           >
             <a href="#cta">

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { createClient, SupabaseClient } from '@supabase/supabase-js'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
@@ -21,6 +21,17 @@ export default function SignUp() {
   const [isSubmitting, setIsSubmitting] = useState(false)
 
   let isMounted = true;
+
+  const inputRef = useRef(null);  
+
+ 
+  const scrollToInput = () => {
+    if (inputRef.current) {
+      inputRef.current.scrollIntoView({
+        behavior: 'smooth', 
+        block: 'center', 
+      });
+    }}
 
   useEffect(() => {
     return () => {
@@ -112,6 +123,8 @@ export default function SignUp() {
           />
           <button
             type="submit"
+            id="sign-up-input"
+            onClick={scrollToInput}
             className="bg-[#2A1250] text-white font-custom px-6 py-2 rounded-lg hover:bg-gray-800 transition-colors"
             disabled={isSubmitting}
           >

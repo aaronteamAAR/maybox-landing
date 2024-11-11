@@ -11,7 +11,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg nav-contain border-gray-200  md:pt-5 ">
+    <nav className="bg nav-contain  md:pt-5 ">
       <div className="container  flex flex-wrap items-left justify-between mx-auto p-4">
         <Link to="/" className="flex items-end justify-center space-x-3 rtl:space-x-reverse">
          <NavbarSvg />
@@ -29,7 +29,7 @@ const Navbar = () => {
           </svg>
         </button>
         <div className={`items-center justify-center ${isOpen ? 'block' : 'hidden'} w-full md:flex md:w-auto md:mr-96`} id="navbar-menu">
-          <ul className="flex flex-col  p-4 md:p-0 mt-4 font-normal md:bg-transparent   bg-gray-50 md:space-x-12 rtl:space-x-reverse md:flex-row md:mt-0">
+          <ul className="flex flex-col  p-4 md:p-0 mt-4 font-normal md:bg-transparent   md:space-x-12 rtl:space-x-reverse md:flex-row md:mt-0">
             <li>
               <a href="#cta" className="block py-2 font-custom2 px-3 text-gray-600 md:text-gray-600 text-black hover:bg-gray-100 md:hover:bg-gray-0 rounded md:bg-transparent md:text-black md:p-0" aria-current="page">Join Us</a>
             </li>
