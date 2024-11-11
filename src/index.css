@@ -10,7 +10,19 @@
   padding: 0;
 }
 
+::-webkit-scrollbar {
+  width: var(--scrollbar-width, 6px);
+  height: var(--scrollbar-width, 6px);
+}
 
+::-webkit-scrollbar-thumb {
+  background-color: rgba(32, 29, 29, 0);
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
 
 body {
   background-color: #f2efe9;
