@@ -1,15 +1,24 @@
-import React from "react";
-import '../../assets/styles/svg.css'
+import React, { useEffect } from 'react';
+import 'aos/dist/aos.css';
+import AOS from 'aos';
+import '../../assets/styles/svg.css';
 
 export default function FeatureCards() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, 
+      easing: 'ease-in-out', 
+    });
+  }, []);
   return (
-    <div className="w-full flex items-center justify-center min-h-screen md:">
+    <div className="w-full flex items-center justify-center min-h-screen md:" data-aos="fade-up">
       <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 gap-8 px-4 w-full">
         {/* First Card */}
         <div className="rounded-lg flex flex-col w-full">
           <div className="bg-white rounded-t-[22px] w-full px-6 py-8">
             <h1 className="text-5xl font-custom font-medium mb-2">Feel</h1>
-            <p className="text-[#6C6C6C] font-custom2">Let us help you feel glamorous and beautiful.</p>
+            <p className="text-[#6C6C6C] font-custom2" data-aos="fade-up" data-aos-delay="700"
+    >Let us help you feel glamorous and beautiful.</p>
           </div>
           <div className="bg-[#9655FD] rounded-b-[22px] w-full py-16 flex items-center justify-center flex-grow">
           <svg
@@ -61,7 +70,7 @@ export default function FeatureCards() {
           </div>
           <div className="bg-white rounded-b-[22px] w-full px-6 py-8">
             <h1 className="text-5xl font-custom font-medium mb-2">Look</h1>
-            <p className="text-[#6C6C6C] font-custom2">Let us help you look bold with a natural glow.</p>
+            <p className="text-[#6C6C6C] font-custom2" data-aos="fade-up" data-aos-delay="700">Let us help you look bold with a natural glow.</p>
           </div>
         </div>
 
@@ -86,7 +95,7 @@ export default function FeatureCards() {
               </svg>
             </div>
             <div className="bg-white px-6 py-8 flex flex-col-reverse text-left md:text-right">
-              <p className="text-[#6C6C6C] font-custom2">Let us help you care<br/>for yourself the way you deserve.</p>
+              <p className="text-[#6C6C6C] font-custom2" data-aos="fade-up" data-aos-delay="700">Let us help you care<br/>for yourself the way you deserve.</p>
               <h1 className="text-5xl font-medium font-custom mb-2">Care</h1>
             </div>
           </div>

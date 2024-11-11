@@ -14,7 +14,7 @@ export default function Body() {
     <Navbar />
     <HeroSection />
     <div className="mt-20 md:mt-40 px-4 md:px-0">
-            <p className="text-[#6C6C6C] text-sm font-custom2">Did you know?</p>
+            <p className="text-[#6C6C6C] text-sm font-custom2 md:text-[21px]">Did you know?</p>
             <p className="mt-2 text-[20px] font-meduim font-custom leading-[32px]  md:text-2xl">
               Consumers are increasingly demanding{" "}
               <span className="text-[#FBA013]">

@@ -4,7 +4,7 @@ import '../../assets/styles/svg.css'
 export default function FeatureList() {
   return (
     <section className="relative md:left-20" id="steps">
-   <div className="pt-40 pb-10 text-center md:text-left">
+   <div className="pt-36 pb-10 text-center md:text-left">
   <h2 className="pb-3 font-custom text-4xl md:text-3xl text-[#1E1E1E]">
     Steps
   </h2>
