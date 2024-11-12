@@ -33,11 +33,11 @@ export default function SignUp() {
       });
     }}
 
-  useEffect(() => {
-    return () => {
-      isMounted = false;
-    };
-  }, []);
+    useEffect(() => {
+      return () => {
+        isMounted.current = false;
+      };
+    }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault()
