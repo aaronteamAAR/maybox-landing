@@ -9,12 +9,13 @@ const Aboutbody = () => {
           <img
             src={heroimg}
             alt="Hero image"
-            className="w-full hero h-full object-cover rounded-0 md:rounded-3xl md:px-0 px-3"
-          /> {/* Optional overlay for better text visibility */}
+            className="w-full hero h-full object-cover rounded-0 md:rounded-3xl"
+          />
+          <div className="absolute inset-0 bg-black rounded-0 md:rounded-3xl bg-opacity-30 " /> {/* Optional overlay for better text visibility */}
 
           {/* Added a div with opacity to darken and give the background image some aesthetics and for the div in front of it, emphasis */}
 
-          <div className="absolute bottom-10 left-4 md:bottom-28 md:left-8 z-10 md:w-full w-72   bg-white p-4 md:p-8 max-w-md">
+          <div className="absolute bottom-10 left-4 md:bottom-28 md:left-8 z-10 md:w-full w-96 bg-white p-4 md:p-8 max-w-md">
             <p className="font-normal pl-[4px] tracking-tight text-[15px] font-custom2 text-customOrangeDark">
               Unbox Your Glow Up
             </p>
@@ -32,7 +33,7 @@ const Aboutbody = () => {
       </section>
 
       <section className="flex justify-center mt-24 font-custom2 px-6 md:px-12">
-        <div className="max-w-3xl">
+        <div className="w-full">
           <p className="mb-4">
             At MayBox, we started with a simple goal: to make beauty better for
             you.{" "}

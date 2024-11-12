@@ -6,8 +6,8 @@ import toast, { Toaster } from "react-hot-toast";
 import { createClient } from "@supabase/supabase-js";
 
 // Supabase setup
-const supabaseUrl = 'https://ofqdiiomchqesounleol.supabase.co';
-const supabaseAnonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9mcWRpaW9tY2hxZXNvdW5sZW9sIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzEwMDU1OTAsImV4cCI6MjA0NjU4MTU5MH0.oExzRDY4RMZe4aCXfiGzZy_jfoO5_oDE0YMeE_fXGjo';
+const supabaseUrl =  process.env.REACT_APP_SUPABASE_URL;
+const supabaseAnonKey =  process.env.REACT_APP_SUPABASE_KEY
 const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
 const VendorForm = () => {
