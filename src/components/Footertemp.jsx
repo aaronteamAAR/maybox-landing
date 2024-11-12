@@ -1,6 +1,11 @@
 import React from "react"
 
-export default function Footer() {
+/*
+Created/Replicated the footer because of the Navigation, it changes because of the pages so I had to figure out a solution and
+this Footer template is wired only to the About us page and Vendors
+*/
+
+export default function Footertemp() {
     return (
       <footer className="">
            <div className="mx-auto px-4 py-12">
@@ -27,13 +32,13 @@ export default function Footer() {
           <div className="mr-28">
             <h3 className="font-custom text-2xl mb-4">Helpful Links</h3>
             <nav className="space-y-3">
-              <a href="#cta" className="block font-custom2 text-[#000000">
+              <a href="/" className="block font-custom2 text-[#000000">
                 Join Us
               </a>
-              <a href="#faqs" className="block font-custom2 text-[#000000">
+              <a href="/#faqs" className="block font-custom2 text-[#000000">
                 FAQs
               </a>
-              <a href="#benefits" className="block font-custom2 text-[#000000">
+              <a href="/vendors" className="block font-custom2 text-[#000000">
                 Benefits
               </a>
             </nav>
@@ -68,10 +73,10 @@ export default function Footer() {
           <div className="md:pl-8 relative md:left-60">
             <h3 className="font-custom text-2xl mb-4 mb-4">Helpful Links</h3>
             <nav className="space-y-3">
-              <a href="#cta" className="block font-custom2 text-gray-600 hover:text-gray-900">
+              <a href="/" className="block font-custom2 text-gray-600 hover:text-gray-900">
                 Join Us
               </a>
-              <a href="#faqs" className="block font-custom2 text-gray-600 hover:text-gray-900">
+              <a href="/#faqs" className="block font-custom2 text-gray-600 hover:text-gray-900">
                 FAQs
               </a>
               <a href="/vendors" className="block font-custom2 text-gray-600 hover:text-gray-900">

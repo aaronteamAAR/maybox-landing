@@ -7,6 +7,8 @@ import FeatureList from '../components/features/FeatureList'
 import BenfitsList from '../components/features/BenfitsList'
 import FAQ from '../components/Faq'
 import SignUp from '../components/SignUp'
+ import css from '../assets/styles/index.css'
+// Created a css file for smooth transistion and navigation during inline styling
 
 export default function Body() {
   return (
@@ -41,8 +43,14 @@ export default function Body() {
         </section>
         <FeatureList />
         <BenfitsList />
+        <div id="faqs">
         <FAQ />
+        </div>
+        
+        <div id='cta'>
         <SignUp />
+        </div>
+       
     <Footer />
     </div>
   )
