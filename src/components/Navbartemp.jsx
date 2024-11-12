@@ -2,8 +2,13 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import NavbarSvg from './NavbarSvg'
 
+/*
+Created/Replicated the Navbar because of the Navigation, it changes because of the pages so I had to figure out a solution and
+this Navbar template is wired only to the About us page and Vendors
+*/
 
-const Navbar = () => {
+
+const Navbartemp = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleNavbar = () => {
@@ -31,7 +36,7 @@ const Navbar = () => {
         <div className={`items-center justify-center ${isOpen ? 'block' : 'hidden'} w-full md:flex md:w-auto md:mr-96`} id="navbar-menu">
           <ul className="flex flex-col  p-4 md:p-0 mt-4 font-normal md:bg-transparent   md:space-x-12 rtl:space-x-reverse md:flex-row md:mt-0">
             <li>
-              <a href="#cta" className="block py-2 font-custom2 px-3 text-gray-600 md:text-gray-600 rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0">Join Us</a>
+              <a href="/" className="block py-2 font-custom2 px-3 text-gray-600 md:text-gray-600 rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0">Join Us</a>
             </li>
             <li>
               <a href="/about" className="block py-2 font-custom2 px-3 text-gray-600 md:text-gray-600 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:bg-gray-100 md:p-0 hover-0  md:dark:hover:bg-transparent">About</a>
@@ -47,4 +52,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Navbartemp;
