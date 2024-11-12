@@ -88,7 +88,7 @@ const VendorForm = () => {
   return (
     <>
       <Navbartemp />
-      <section className="bg-white rounded-0 md:ml-0 ml-1 pt-3 mt-3 md:rounded-2xl font-neueEinstellung">
+      <section className="md:bg-white bg-0 rounded-0 md:ml-0 ml-1 pt-3 mt-3 md:rounded-2xl font-neueEinstellung">
         <div className="lg:grid lg:min-h-screen lg:grid-cols-12">
           <main className="flex items-center justify-center px-8 py-8 sm:px-12 lg:col-span-7 lg:px-16 lg:py-12 xl:col-span-6">
             <div className="max-w-xl mt-8 lg:max-w-3xl">
@@ -119,7 +119,7 @@ const VendorForm = () => {
                     value={formData.companyName}
                     onChange={handleChange}
                     required
-                    className="mt-1 w-full rounded-md border border-black bg-white text-sm text-gray-700 p-2"
+                    className="mt-1 w-full rounded-md border border-black md:bg-white bg-gray text-sm text-gray-700 p-2"
                   />
                 </div>
 
@@ -137,7 +137,7 @@ const VendorForm = () => {
                     value={formData.contactPerson}
                     onChange={handleChange}
                     required
-                    className="mt-1 w-full rounded-md border border-black bg-white text-sm text-gray-700 p-2"
+                    className="mt-1 w-full rounded-md border border-black bg-0 md:bg-white text-sm text-gray-700 p-2"
                   />
                 </div>
 
