@@ -99,7 +99,7 @@ export default function HeroSection() {
       </div>
 
       {/* Part 2 */}
-      <div className="flex justify-center mt-24 md:w-1/2 md:mt-12 relative">
+      <div className="flex justify-center mt-12 md:w-1/2 md:mt-12 relative">
         <img
           src={Hero}
           alt="hero image"
