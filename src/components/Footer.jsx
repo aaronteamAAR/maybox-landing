@@ -48,7 +48,7 @@ export default function Footer() {
 
           {/* Links Section */}
           <div className="md:pl-8 relative md:left-60">
-            <h3 className="font-custom text-2xl mb-4 mb-4">Helpful Links</h3>
+            <h3 className="font-custom text-2xl mb-4">Helpful Links</h3>
             <nav className="space-y-3">
               <a
                 href="#cta"
