@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { createClient, SupabaseClient } from '@supabase/supabase-js'
-import toast, { Toaster } from 'react-hot-toast';
+import toast, { Toaster, ToastBar } from 'react-hot-toast';
 import '../assets/styles/toast.css'
 
 
@@ -102,7 +102,21 @@ export default function SignUp() {
 
   return (
     <div className="relative md:static  w-screen md:w-auto left-[50%] md:left-0 right-[50%] md:right-0 -mx-[50vw] md:mx-0">
-      <Toaster position="top-center"/>
+      <Toaster position='top-center'>
+  {(t) => (
+    <ToastBar toast={t}>
+      {({ icon, message }) => (
+        <>
+          {t.type === 'success' ? '🔥' : icon}
+          {message}
+          {t.type !== 'loading' && (
+            <button onClick={() => toast.dismiss(t.id)}>X</button>
+          )}
+        </>
+      )}
+    </ToastBar>
+  )}
+</Toaster>
   <div className="py-12 mb-20">
     <div className="bg-[#9655FD] h-[600px] md:h-auto rounded-none md:rounded-3xl w-full px-6 py-12 md:px-12 md:max-w-3xl mx-auto flex md:block items-center justify-center">
       <div className="max-w-xl mx-auto text-center">
