@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { createClient, SupabaseClient } from '@supabase/supabase-js'
-import { ToastContainer, toast } from 'react-toastify'
-import 'react-toastify/dist/ReactToastify.css'
+import toast, { Toaster } from 'react-hot-toast';
 import '../assets/styles/toast.css'
 
 
@@ -103,6 +102,7 @@ export default function SignUp() {
 
   return (
     <div className="relative md:static  w-screen md:w-auto left-[50%] md:left-0 right-[50%] md:right-0 -mx-[50vw] md:mx-0">
+      <Toaster position="top-center"/>
   <div className="py-12 mb-20">
     <div className="bg-[#9655FD] h-[600px] md:h-auto rounded-none md:rounded-3xl w-full px-6 py-12 md:px-12 md:max-w-3xl mx-auto flex md:block items-center justify-center">
       <div className="max-w-xl mx-auto text-center">
@@ -133,7 +133,6 @@ export default function SignUp() {
         </form>
       </div>
     </div>
-    <ToastContainer className="custom-toast-container" position="top-center" />
   </div>
 </div>
   

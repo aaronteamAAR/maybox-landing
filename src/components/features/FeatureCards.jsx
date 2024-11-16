@@ -6,7 +6,7 @@ import '../../assets/styles/svg.css';
 export default function FeatureCards() {
   useEffect(() => {
     AOS.init({
-      duration: 1000, 
+      duration: 800, 
       easing: 'ease-in-out', 
     });
   }, []);
@@ -17,7 +17,7 @@ export default function FeatureCards() {
         <div className="rounded-lg flex flex-col w-full">
           <div className="bg-white rounded-t-[22px] w-full px-6 py-8">
             <h1 className="text-5xl font-custom font-medium mb-2">Feel</h1>
-            <p className="text-[#6C6C6C] font-custom2" data-aos="fade-up" data-aos-delay="700"
+            <p className="text-[#6C6C6C] font-custom2" data-aos="fade-up" data-aos-delay="600"
     >Let us help you feel glamorous and beautiful.</p>
           </div>
           <div className="bg-[#9655FD] rounded-b-[22px] w-full py-16 flex items-center justify-center flex-grow">

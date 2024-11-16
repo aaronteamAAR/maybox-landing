@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbartemp from "../components/Navbartemp";
 import Footertemp from "../components/Footertemp";
-import toast, { Toaster } from "react-hot-toast";
+import toast, { Toaster } from 'react-hot-toast';
 import { createClient } from "@supabase/supabase-js";
 
 // Supabase setup
