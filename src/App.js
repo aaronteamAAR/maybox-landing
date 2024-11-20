@@ -5,6 +5,8 @@ import Landing from './pages/Body';
 import Aboutbody from './pages/About';
 import Vendors from './pages/Vendors';
 import Vendorfeedback from './pages/Vendorfeedback'
+import Blog from "./pages/BlogLayout"
+import Post from "./pages/Blogs/post"
 
 function App() {
   return (
@@ -13,8 +15,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/about" element={<Aboutbody />} />
+        <Route path="/blogs" element={<Blog />} />
         <Route path="/vendors" element={<Vendors />} />
         <Route path="/vendorfeedback" element={<Vendorfeedback />} />
+        <Route path="/blog/:slug" element={<Post />} />
       </Routes>
     </div>
   );
