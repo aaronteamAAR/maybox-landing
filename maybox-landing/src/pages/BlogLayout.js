@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import BlogCard from "../components/blog/BlogCard";
 import LatestCard from "../components/blog/LatestCard";
-import Blog from "./Blogs/blog";
+import Blog from "./blogs/blog";
 import Footertemp from "../components/Footertemp";
 
 export default function BlogLayout() {
