@@ -8,6 +8,11 @@
 # testing
 /coverage
 
+/content-data/node_modules
+/content-data/dist
+/content-data/.env
+
+
 # production
 /build
 
