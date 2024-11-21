@@ -1,10 +1,27 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { client, urlFor } from "../../libs/client";
-import { PortableText } from "@portabletext/react";
+import ReactMarkdown from 'react-markdown'; // Import react-markdown
 import Footer from "../../components/Footer";
 import Footertemp from "../../components/Footertemp";
 import Navbartemp from "../../components/Navbartemp";
+
+// Helper function to extract text from the Sanity body
+const extractText = (block) => {
+  if (typeof block === 'string') {
+    return block;
+  }
+
+  if (Array.isArray(block)) {
+    return block.map(extractText).join('');
+  }
+
+  if (block?.children) {
+    return block.children.map(extractText).join('');
+  }
+
+  return '';
+};
 
 export default function Post() {
   const { slug } = useParams(); // Get the slug from the route
@@ -57,6 +74,9 @@ export default function Post() {
   const { title, mainImage, body, _createdAt, author } = post;
   console.log(post);
 
+  // Extract text from the body before passing to ReactMarkdown
+  const bodyText = body ? body.map(extractText).join('') : '';
+
   return (
     <>
       <Navbartemp />
@@ -88,49 +108,8 @@ export default function Post() {
         </div>
 
         <div className="prose max-w-none">
-          <PortableText
-            value={body}
-            components={{
-              types: {
-                image: ({ value }) => (
-                  <img
-                    src={urlFor(value).url()}
-                    alt={value.alt || "Blog image"}
-                    className="rounded-md my-4"
-                  />
-                ),
-              },
-              marks: {
-                link: ({ value, children }) => (
-                  <a
-                    href={value.href}
-                    className=""
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {children}
-                  </a>
-                ),
-              },
-              block: {
-                h1: ({ children }) => (
-                  <h1 className="text-3xl font-custom font-bold my-4">
-                    {children}
-                  </h1>
-                ),
-                h2: ({ children }) => (
-                  <h2 className="text-2xl font-custom2 font-medium my-3">
-                    {children}
-                  </h2>
-                ),
-                normal: ({ children }) => (
-                  <p className="text-lg font-custom2 text-[#555555] my-2">
-                    {children}
-                  </p>
-                ),
-              },
-            }}
-          />
+          {/* Use ReactMarkdown to render the plain text */}
+          <ReactMarkdown>{bodyText}</ReactMarkdown>
         </div>
       </div>
       <Footertemp />
