@@ -6,7 +6,7 @@ import Aboutbody from './pages/About';
 import Vendors from './pages/Vendors';
 import Vendorfeedback from './pages/Vendorfeedback'
 import Blog from "./pages/BlogLayout"
-import Post from "./pages/Blogs/post"
+import Post from "./pages/blogs/post"
 
 function App() {
   return (
