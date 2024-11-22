@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { client, urlFor } from "../../libs/client";
 import { PortableText } from "@portabletext/react";
-import Footer from "../../components/Footer";
 import Footertemp from "../../components/Footertemp";
 import Navbartemp from "../../components/Navbartemp";
 
