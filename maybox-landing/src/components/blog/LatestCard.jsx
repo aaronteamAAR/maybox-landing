@@ -52,11 +52,11 @@ export default function LatestCard() {
         
         <div className="absolute inset-0 bg-black/30 flex flex-col justify-end p-4 md:p-6 text-white group-hover:bg-black/50 transition-all duration-300">
         
-          <h3 className="text-[26px] leading-[26.5px] font-custom md:text-[71px] md:mb-8 font-bold">
+          <h3 className="text-[26px] leading-[27px] font-custom md:text-[71px] md:leading-[77px] md:mb-8 font-bold">
             {title}
           </h3>
         
-          <p className="text-sm font-custom2 md:text-[36px] mt-1">
+          <p className="text-sm font-custom2 md:text-[36px] ">
             {excerpt || "Story of the week"}
           </p>
         </div>

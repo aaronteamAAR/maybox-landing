@@ -58,7 +58,7 @@ export default function Post() {
   return (
     <>
       <Navbartemp />
-      <div className="container mx-auto max-w-7xl px-6 py-8">
+      <div className="container mx-auto max-w-4xl px-8 py-8">
         <h1 className="text-4xl font-extrabold font-custom mb-4">{title}</h1>
 
         <div className="flex items-start my-6 text-[#555555] font-custom2">
@@ -96,7 +96,7 @@ export default function Post() {
                       <img
                         src={urlFor(value.asset).url()}
                         alt={value.alt || "Blog image"}
-                        className="rounded-md my-4"
+                        className="rounded-[14px] my-4"
                       />
                     );
                   }
@@ -117,10 +117,10 @@ export default function Post() {
               },
               block: {
                 h1: ({ children }) => (
-                  <h1 className="text-3xl font-custom font-bold my-4">{children}</h1>
+                  <h1 className="text-3xl font-custom text-black font-extrabold my-4">{children}</h1>
                 ),
                 h2: ({ children }) => (
-                  <h2 className="text-2xl font-custom2 font-medium my-3">{children}</h2>
+                  <h2 className="text-2xl font-custom2 text-black font-bold my-3">{children}</h2>
                 ),
                 normal: ({ children }) => (
                   <p className="text-lg font-custom2 text-[#555555] my-2">{children}</p>

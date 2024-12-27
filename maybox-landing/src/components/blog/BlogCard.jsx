@@ -16,7 +16,7 @@ export default function ({ post }) {
             }
             alt={post.title || "Blog Thumbnail"}
           />
-          <div className="mt-4">
+          <div className="mt-4 w-[336px] md:w-[541px]">
             <h3 className="text-[24px] font-medium leading-[43.2px] font-custom2 md:text-[36px]">
               {post.title}
             </h3>
